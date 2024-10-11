@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Tokenizer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>The Tokenizer</h1>
+
+    <div class="input-group">
+        
+        <div class="file-selector">
+         
+            <input type="file" id="fileInput" accept=".cpp,.txt" style="display: none;">
+            
+            <label for="fileInput" id="chooseFileButton">Choose File</label>
+           
+            <span id="fileName"></span>
+        </div>
+    
+        <button id="processButton">Process File</button>
+    </div>
+
+    <div id="processedCode" style="display: none;">
+        <h2>Processed Code (Without Spaces and Comments):</h2>
+        <pre id="codeOutput"></pre>
+    </div>
+
+    <div id="tokenizedCode" style="display: none;">
+        <h2>Tokenized Code:</h2>
+        <table id="tokenizedTable">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Tokens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tokens will be displayed here -->
+            </tbody>
+        </table>
+        <p id="totalTokens"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
